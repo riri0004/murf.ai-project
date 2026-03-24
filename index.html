@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI News Reader</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #1e293b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .controls {
+            text-align: center;
+            margin: 20px;
+        }
+
+        select, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .news-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .play-btn {
+            margin-top: 10px;
+            background: #10b981;
+        }
+
+        .play-btn:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>📰 Multilingual AI News Reader</header>
+
+<div class="controls">
+    <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+    </select>
+
+    <button onclick="getNews()">Get News</button>
+</div>
+
+<div id="newsList" class="news-container"></div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
